@@ -64,7 +64,7 @@ Integrated Gradients (IG) is an interpretability technique designed to attribute
   - *Completeness*: The sum of attributions equals the difference between the model's output for the input and the baseline:
 
 $$
-\text{IG}_{i}(x)=(x_{i}-x_{i}^{\prime })\times \int _{\alpha =0}^{1}\frac{\partial F(x^{\prime }+\alpha \cdot (x-x^{\prime }))}{\partial x_{i}}d\alpha 
+IntegratedGradients_{i}(x) ::= (x_{i} - x'_{i})\times\int_{\alpha=0}^1\frac{\partial F(x'+\alpha \times (x - x'))}{\partial x_i}{d\alpha}
 $$
 
 This expression calculates the contribution of each input feature $x_i$ by averaging gradients taken along a path between the baseline $x'$ and the actual input $x$.
